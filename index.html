@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mapping in Excel</title>
+    <style>
+        /* Minimalistic CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+
+        .viewer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .viewer-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .viewer-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+
+        .viewer-description {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .iframe-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .viewer-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Mapping in Excel</h1>
+        
+        <div class="viewer-container">
+            <!-- Excel Viewer -->
+            <div class="viewer-card">
+                <div class="viewer-header">
+                    <h2>Live Excel Sheet</h2>
+                    <p class="viewer-description">Interactive spreadsheet viewer</p>
+                </div>
+                <div class="iframe-container">
+                    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/PFarahani/excel-data-mapping/refs/heads/main/assets/files/Data.xlsx"></iframe>
+                </div>
+            </div>
+
+            <!-- PowerPoint Viewer -->
+            <div class="viewer-card">
+                <div class="viewer-header">
+                    <h2>Presentation Deck</h2>
+                    <p class="viewer-description">Supporting PowerPoint presentation</p>
+                </div>
+                <div class="iframe-container">
+                    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/PFarahani/excel-data-mapping/refs/heads/main/assets/files/Mapping%20in%20Excel.pptx"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
